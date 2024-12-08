@@ -1,6 +1,20 @@
-<h1>CV</h1>
-<ul>
+<!-- <h1>CV</h1> -->
+<!-- <ul>
  @for (cv of cvs; track cv.employer) {
  <li>{{ cv.employer }} {{ cv.start }} - {{ cv.end }}</li>
  }
-</ul>
+</ul> -->
+
+<div class="row">
+    <div class="col s12 m6">
+        <div class="card">
+          <span class="card-title">Mein Lebenslauf</span>
+          <ul>
+            @for (cv of cvs; track cv.employer) {
+            <li>• {{ cv.employer }} {{ cv.start }} - {{ cv.end }}</li>
+            }
+           </ul>
+        </div>
+    </div>
+  </div>
+         
