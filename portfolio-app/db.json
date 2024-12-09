@@ -1,0 +1,23 @@
+{
+  "about-me": [
+    {
+      "id": "detail",
+      "name": "Emanuele Pintarelli",
+      "imagePath": "/assets/profile.jpg"
+    }
+  ],
+  "cvs": [
+    {
+      "employer": "Swisscom (Schweiz) AG",
+      "start": "2018-01-08",
+      "end": "2023-03-05",
+      "id": "c8a1"
+    },
+    {
+      "id": "defa",
+      "employer": "Dynasoft AG",
+      "start": "2023-01-06",
+      "end": "2024-09-12"
+    }
+  ]
+}

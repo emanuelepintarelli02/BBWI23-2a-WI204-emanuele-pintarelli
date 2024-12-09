@@ -1,3 +1,9 @@
+<h1 class="about-me-title">About Me</h1>
+<form #aboutMeForm="ngForm" (ngSubmit)="submit(aboutMeForm)" class="about-me-form">
+ <input type="text" name="name" [ngModel]="aboutMe?.name" required>
+ <button class="btn" type="submit" [disabled]="aboutMeForm.invalid">save</button>
+</form>
+<!-- <img [src]="aboutMe?.imagePath">  -->
 <!-- <h1>About me</h1> -->
 <!-- <p>{{ aboutMe?.name }}</p> -->
 <!-- <img [src]="aboutMe?.imagePath"> -->
@@ -6,13 +12,13 @@
       <div class="card">
         <div class="card-image">
           <img [src]="aboutMe?.imagePath" style="width: 300px; height: auto;"> 
-          <span class="card-title">About Me</span>
+          <!-- <span class="card-title">About Me</span> -->
         </div>
         <!-- <div class="card-title">
             <p>About Me</p>
         </div> -->
         <div class="card-content">
-          <p>Mein Name ist Emanuele Pintarelli. Ich bin 22 Jahre alt und komme aus Zuchwil.
+          <p>Mein Name ist {{ aboutMe?.name }}. Ich bin 22 Jahre alt und komme aus Zuchwil.
           <br>
           <br> Was ich mag:
           <br> • Fussball spielen 

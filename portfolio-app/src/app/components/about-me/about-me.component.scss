@@ -11,6 +11,7 @@
   }
 
 .card-content {
+  display: inline-block; 
   padding: 10px; /* Anpassen oder auf 0 setzen */
   margin: 0;    /* Anpassen oder auf 0 setzen */
   width: 300px; /*  Oder die Breite des Bildes verwenden */ 
@@ -30,4 +31,15 @@
     padding-bottom: 0;
     text-align: center;
     // line-height: 0; /*  reduziert den Abstand zwischen den Zeilen */
+}
+
+.about-me-title {
+  color: #9AA6B2;
+  font-size: 50px;
+  font-weight: bold;
+  padding-left: 10.500px;
+}
+
+.about-me-form {
+  padding-left: 10.500px;
 }
