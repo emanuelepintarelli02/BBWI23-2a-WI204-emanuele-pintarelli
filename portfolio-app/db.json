@@ -8,10 +8,10 @@
   ],
   "cvs": [
     {
-      "id": "defa",
       "employer": "Dynasoft AG",
       "start": "2023-01-06",
-      "end": "2024-09-12"
+      "end": "2024-09-12",
+      "id": "defa"
     }
   ]
 }
