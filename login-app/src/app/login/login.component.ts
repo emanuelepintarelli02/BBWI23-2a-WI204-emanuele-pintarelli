@@ -1,36 +1,32 @@
-// import { Component } from '@angular/core';
-
-// @Component({
-//   selector: 'app-login',
-//   standalone: false,
-  
-//   templateUrl: './login.component.html',
-//   styleUrl: './login.component.scss'
-// })
-// export class LoginComponent {
-
-// }
-
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
+import { LoginService } from '../login.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrl: './login.component.scss'
 })
 export class LoginComponent {
-  loginForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
-    this.loginForm = this.fb.group({
-      username: '',
-      password: ''
+  formGroup = this.formBuilder.group({
+    username: [null, [Validators.required]],
+    password: [null, [Validators.required]]
+  })
+
+  constructor(
+    private formBuilder: FormBuilder,
+    private loginService: LoginService,
+  ) {}
+
+  login() {
+    console.log(this.formGroup.value);
+    this.loginService.login(
+      this.formGroup.value.username!,
+      this.formGroup.value.password!,
+    ).subscribe({
+      next: user => alert('Welcome ' + user.username),
+      error: err => alert('Login failed!'),
     });
-  }
-
-  onSubmit() {
-    // Handle login submission
-    console.log(this.loginForm.value);
   }
 }
